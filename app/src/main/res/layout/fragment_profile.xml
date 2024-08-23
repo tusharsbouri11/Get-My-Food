@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_45sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hey There!"
+                android:textAlignment="center"
+                android:textSize="@dimen/_28ssp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/user_plus"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Enter Your Name"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/mail"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/lock"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/baseline_local_phone_24"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Enter Phone Number"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/addLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/location"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Address Line 1"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/addLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/location"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Address Line 2"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/pincode"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="Pincode"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/city"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="City"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/state"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:ems="10"
+                    android:hint="State"
+                    android:inputType="phone"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button"
+                    android:text="Save Info"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18ssp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
