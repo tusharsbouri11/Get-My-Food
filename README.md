@@ -12,7 +12,7 @@ Download and install the app from the releases section. Alternatively, you can a
 
 ## Acknowledgements
 
-Thanks to these Github repos and its authoe for making the project possible :
+Thanks to these Github repos and its author for making the project possible :
 - [sdp](https://github.com/matiassingers/awesome-readme) by [Intuit](https://github.com/intuit)
  - [ssp](https://github.com/intuit/ssp) by [Intuit](https://github.com/intuit)
 
