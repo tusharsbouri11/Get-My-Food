@@ -3,7 +3,7 @@
 Get My Food is a convenient and user-friendly android app, that provides users the functionality of ordering food. Developed as a college project, it makes use of Firebase Authenticaltion, Firebase Realtime Database, Firebase Database and Firebase Firestore. It is the user version, and allows users to browse menu, and place orders for the food of their choice. Further development of features for this app is underway!
 
 <p align="center">
-<img src="https://github.com/tusharsbouri11/Stranger-Texter/blob/master/logo.png?raw=true" alt="logo" width="300" height="300" />
+<img src="https://github.com/tusharsbouri11/Get-My-Food/blob/master/app/src/main/res/drawable-v24/logo.png" alt="logo" width="300" height="300" />
 </p>
 
 ## Installation
