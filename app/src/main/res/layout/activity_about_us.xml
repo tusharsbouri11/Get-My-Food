@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.aboutus.AboutUs">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="179dp"
+        android:layout_marginBottom="34dp"
+        android:paddingLeft="@dimen/_9sdp"
+        android:paddingRight="@dimen/_9sdp"
+        android:text="Made With \u2665 by Tushar Subhra Bouri"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:paddingLeft="@dimen/_9sdp"
+        android:paddingRight="@dimen/_9sdp"
+        android:text="Follow Me On:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/linkedin"
+        app:layout_constraintEnd_toEndOf="@+id/linkedin"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <ImageView
+        android:id="@+id/insta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:src="@drawable/insta"
+        app:layout_constraintBottom_toBottomOf="@+id/linkedin"
+        app:layout_constraintEnd_toStartOf="@+id/linkedin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linkedin" />
+
+    <ImageView
+        android:id="@+id/linkedin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:src="@drawable/linkedin"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/insta"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="@dimen/_9sdp"
+        android:paddingRight="@dimen/_9sdp"
+        android:text="My GitHub:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@+id/github"
+        app:layout_constraintStart_toStartOf="@+id/insta"
+        app:layout_constraintTop_toBottomOf="@+id/linkedin" />
+
+    <ImageView
+        android:id="@+id/github"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="317dp"
+        android:layout_weight="1"
+        android:src="@drawable/githubwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

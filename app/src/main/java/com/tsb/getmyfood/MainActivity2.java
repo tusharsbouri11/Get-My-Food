@@ -3,16 +3,19 @@ package com.tsb.getmyfood;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.tsb.getmyfood.activities.login;
+import com.tsb.getmyfood.ui.aboutus.AboutUs;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
@@ -28,8 +31,9 @@ public class MainActivity2 extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private FirebaseAuth auth;
     private FirebaseUser user;
+    private FirebaseDatabase db;
     private static NavController navController;
-    private TextView navHeaderTitle;
+    private TextView navUserName, navMail;
 
     public static NavController getNavController() {
         return navController;
@@ -56,9 +60,30 @@ public class MainActivity2 extends AppCompatActivity {
 
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
-        navHeaderTitle=navigationView.getHeaderView(0).findViewById(R.id.headerTitle);
-        navHeaderTitle.setText(user.getEmail());
+        db=FirebaseDatabase.getInstance();
+        setUserName(navigationView);
+        navMail=navigationView.getHeaderView(0).findViewById(R.id.header_mail);
+        navMail.setText(user.getEmail());
 //        Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
+    }
+
+    private void setUserName(@NonNull NavigationView navigationView) {
+        navUserName=navigationView.getHeaderView(0).findViewById(R.id.headerTitle);
+        db.getReference("Users").child(user.getUid()).child("name")
+                .addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String name = dataSnapshot.getValue(String.class);
+                navUserName.setText(name);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Failed to read value
+                Toast.makeText(MainActivity2.this, "Failed to get username", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -84,8 +109,9 @@ public class MainActivity2 extends AppCompatActivity {
             }
         }
 
-        if(id==R.id.action_settings)
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+        if(id==R.id.action_about) {
+            startActivity(new Intent(MainActivity2.this, AboutUs.class));
+        }
 
         return super.onOptionsItemSelected(item);
     }

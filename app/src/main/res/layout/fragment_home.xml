@@ -12,11 +12,14 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="3dp"
+            android:inputType="text"
             android:layout_margin="@dimen/_10sdp"
             android:drawableStart="@drawable/searchimg"
+            android:gravity="center_vertical"
             android:hint="Search"
             android:paddingStart="@dimen/_8sdp"
             android:background="@drawable/whitebutton"
@@ -24,6 +27,7 @@
             android:textSize="@dimen/_15ssp" />
 
         <LinearLayout
+            android:id="@+id/mostly_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -32,6 +36,7 @@
             android:weightSum="2">
 
             <TextView
+                android:id="@+id/mostly_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -60,11 +65,11 @@
             android:layout_marginTop="@dimen/_5sdp"/>
 
         <LinearLayout
+            android:id="@+id/explore_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:id="@+id/container"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -97,6 +102,7 @@
             android:layout_marginBottom="@dimen/_5sdp"/>
 
         <LinearLayout
+            android:id="@+id/newest_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
